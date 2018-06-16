@@ -25,7 +25,7 @@ const Hello = props => (
 );
 
 Hello.defaultProps = {
-  name: "David"
+  name: "😐"
 };
 
 Hello.propTypes = {
@@ -34,7 +34,7 @@ Hello.propTypes = {
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
-    <Hello name="risacan" />,
+    <Hello />,
     document.body.appendChild(document.createElement("div"))
   );
 });
