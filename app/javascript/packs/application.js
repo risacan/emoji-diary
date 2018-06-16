@@ -8,5 +8,11 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log("Hello World from Webpacker");
-require("./hello_react.jsx");
-import "../application/styles/application";
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "../components/app";
+
+document.addEventListener("DOMContentLoaded", () => {
+  ReactDOM.render(<App />, document.getElementById("app"));
+});
