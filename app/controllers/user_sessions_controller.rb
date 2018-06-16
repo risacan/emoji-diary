@@ -21,8 +21,7 @@ class UserSessionsController < ApplicationController
           flash[:notice] = "Signed up successfully. Thank you!"
         end
       end
-
-      # p UserSession.create(account.user)
+      UserSession.create(account.user)
       redirect_to root_path
     end
   rescue => e
