@@ -9,3 +9,4 @@
 
 console.log("Hello World from Webpacker");
 require("./hello_react.jsx");
+import "../application/styles/application";
