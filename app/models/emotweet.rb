@@ -1,0 +1,2 @@
+class Emotweet < ApplicationRecord
+end
