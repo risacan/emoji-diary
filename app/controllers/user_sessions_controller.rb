@@ -29,4 +29,9 @@ class UserSessionsController < ApplicationController
     flash[:error] = e
     redirect_to root_path
   end
+
+  def destroy
+    current_user_session&.destroy
+    redirect_to root_path
+  end
 end

@@ -40,9 +40,13 @@ class App extends React.Component {
   render() {
     console.log("render");
 
-    return (
+    return !this.state.name ? (
       <div>
         <a href="/auth/twitter">Sign in as Twitter</a>
+      </div>
+    ) : (
+      <div>
+        <a href="/sign_out">Sign out</a>
         <h1>{this.state.name}</h1>
       </div>
     );
