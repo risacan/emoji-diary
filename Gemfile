@@ -26,7 +26,7 @@ gem "erb2haml"
 gem "haml-rails"
 
 ## twitter api
-gem "twitter"
+gem "authlogic"
 gem "oauth"
 gem "omniauth-twitter"
 
@@ -37,6 +37,8 @@ group :development, :test do
   gem "capybara", "~> 2.13"
   gem "selenium-webdriver"
   gem "dotenv-rails"
+  gem "pry-rails"
+  gem "pry-byebug"
 end
 
 group :development do
