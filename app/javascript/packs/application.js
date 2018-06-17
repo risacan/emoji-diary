@@ -12,6 +12,7 @@ console.log("Hello World from Webpacker");
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "../components/app";
+import "../application/styles/application";
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<App />, document.getElementById("app"));
