@@ -48,6 +48,7 @@ class App extends React.Component {
       <div>
         <a href="/sign_out">Sign out</a>
         <h1>{this.state.name}</h1>
+        <a href="/emotweets/new">Select one</a>
       </div>
     );
   }
