@@ -5,10 +5,10 @@ class EmotweetNew extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      emoji_id: "",
+      emoji_id: "dog",
       message: "test",
-      user_id: "",
-      emoji_native: ""
+      user_id: 0,
+      emoji_native: true
     };
   }
 
@@ -47,16 +47,31 @@ class EmotweetNew extends React.Component {
       });
   }
 
+  sendEmotweet(event) {
+    console.log(event);
+    event.preventDefault();
+    event.stopPropagation();
+    console.log("おくるぞい");
+    console.log(this.state);
+    fetch("/api/emotweet", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", hoge: "mogeß" },
+      body: JSON.stringify(this.state)
+    })
+      .then(body => {
+        console.log(body);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
   render() {
     return (
       <div>
         <form>
           <div>
-            <Emoji
-              emoji={{ id: this.state.emoji_id }}
-              size={120}
-              native="true"
-            />
+            <Emoji emoji={{ id: this.state.emoji_id }} size={120} />
           </div>
           <div>
             <Picker
@@ -70,7 +85,7 @@ class EmotweetNew extends React.Component {
             </div>
           </div>
           <div>
-            <input type="submit" />
+            <input type="submit" onClick={this.sendEmotweet.bind(this)} />
           </div>
         </form>
       </div>
