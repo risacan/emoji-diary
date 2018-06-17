@@ -66,6 +66,10 @@ class EmotweetNew extends React.Component {
       });
   }
 
+  changeText(e) {
+    this.setState({ message: e.target.value });
+  }
+
   render() {
     return (
       <div>
@@ -81,7 +85,11 @@ class EmotweetNew extends React.Component {
             />
             <div>
               <label>comment</label>
-              <input placeholder={this.state.message} />
+              <input
+                placeholder={this.state.message}
+                value={this.state.message}
+                onChange={this.changeText.bind(this)}
+              />
             </div>
           </div>
           <div>
