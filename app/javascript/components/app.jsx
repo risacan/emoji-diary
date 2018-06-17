@@ -6,7 +6,7 @@ class App extends React.Component {
     super(props);
 
     this.state = { name: "" };
-    this.getState = this.getState.bind(this);
+    this.getState = this.getState;
   }
 
   componentDidMount() {
