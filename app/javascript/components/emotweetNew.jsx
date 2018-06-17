@@ -8,7 +8,7 @@ class EmotweetNew extends React.Component {
       emoji_id: "dog",
       message: "test",
       user_id: 0,
-      emoji_native: true
+      native_emoji: ""
     };
   }
 
@@ -16,7 +16,7 @@ class EmotweetNew extends React.Component {
     console.log(e);
     console.log(e.id);
     console.log("YOU PICKED!");
-    this.setState({ emoji_id: e.id, emoji_native: e.native });
+    this.setState({ emoji_id: e.id, native_emoji: e.native });
   }
 
   componentDidMount() {

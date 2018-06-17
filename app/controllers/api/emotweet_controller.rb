@@ -1,7 +1,7 @@
 class Api::EmotweetController < ApplicationController
   def create
     update_params = {
-      emoji: params[:emoji_native],
+      emoji: params[:native_emoji],
       tweet: params[:message],
       tweeted_by: params[:user_id],
     }
