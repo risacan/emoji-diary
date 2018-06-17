@@ -1,4 +1,5 @@
 import React from "react";
+import "emoji-mart/css/emoji-mart.css";
 
 class App extends React.Component {
   constructor(props) {
